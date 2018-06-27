@@ -1,0 +1,14 @@
+inputfile nvt1.dat
+outputfile output.dat
+temperature 1.0 1.0
+pressure 1.0 1.0
+tstep 0.05
+friction 1.0
+frictionL 0.01
+nstep 1000000
+nequil 4000000
+nconfig 400000 trajectory.xyz
+nstat    10000 energies.dat
+cellfile length.dat
+deep 10.0
+seed 123456789

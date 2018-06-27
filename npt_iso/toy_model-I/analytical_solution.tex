@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amsmath}
+%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
+%\linenumbers\relax % Commence numbering lines
+
+\begin{document}
+%
+Single particle with coordinate $q$ and momentum $p$ moving in a one-dimensional periodic potential\cite{tuckerman} of the form:
+%
+\begin{equation}
+U(q,L)=\frac{m\omega^{2}L^{2}}{4\pi^{2}}\bigg[1-\cos\Big(\frac{2\pi q}{L}\Big)\bigg]. \nonumber
+\end{equation}
+%
+The partition function in the NPT ensemble is:
+%
+\begin{equation}
+\mathcal{Z}_{NPT}=\int_{0}^{\infty}\mathrm{d}Le^{-\beta PL}\mathcal{Z}_{NVT}. \nonumber
+\end{equation}
+%
+where 
+%
+\begin{equation}
+\mathcal{Z}_{NVT}=\frac{1}{h}\sqrt{2\pi m\beta}\int_{0}^{L}\mathrm{d}q e^{-\beta U(q,L)} \nonumber 
+\end{equation}
+%
+and
+%
+\begin{equation}
+\mathcal{Z}_{NPT}=\int_{0}^{\infty}\mathrm{d}L e^{-\beta PL}\frac{1}{h}\sqrt{2\pi m\beta}L e^{-\frac{\beta m\omega^{2}L^{2}}{4\pi^{2}}}I_{0}\Big(\frac{\beta m\omega^{2}L^{2}}{4\pi^{2}}\Big). \nonumber 
+\end{equation}
+%
+The length and position distribution functions are:
+%
+\begin{align}
+&\rho(L)= \frac{1}{\mathcal{Z}_{NPT}} e^{-\beta PL}\frac{1}{h}\sqrt{2\pi m\beta}L e^{-\frac{\beta m\omega^{2}L^{2}}{4\pi^{2}}}I_{0}\Big(\frac{\beta m\omega^{2}L^{2}}{4\pi^{2}}\Big) \nonumber \\
+&\rho(q)=\frac{1}{\mathcal{Z}_{NPT}}\frac{1}{h}\sqrt{2\pi m\beta}\int_{q}^{\infty}\mathrm{d}L e^{-\beta PL}e^{-\beta U(q,L)}
+\label{eqn:partition-NPT}
+\end{align}
+% 
+where $I_{0}$ is the Bessel functions of the first kind, the length and position distribution functions need to be calculated numerically, for which we study the following physical situation in particular $T=1$, $P=1$, $m=1$, $\omega=1$, $k_{B}=1$ and $h=1$.
+%
+\bibliographystyle{unsrt}
+\begin{thebibliography}{1}
+
+\bibitem{tuckerman}
+Mark~E. Tuckerman.
+\newblock {\em Statistical Mechanics: Theory and Molecular Simulation}.
+\newblock Oxford University Press, first edition, 2010.
+
+\end{thebibliography}
+\end{document}
+%

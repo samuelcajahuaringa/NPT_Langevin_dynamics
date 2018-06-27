@@ -1,0 +1,18 @@
+To calculated the Gibbs free energy as function of pressure need to perform a 
+cumulative integration of the length cell as function of the instantaneus volume 
+as function of the external pressure (equation 44 of the main text)
+the parameter of the infile are
+inputfile                     <- file with input positions of the system
+outputfile                    <- file with output positions of the system
+temperature 1.0 1.0           <- temperature start and stop
+pressure 1.0  4.0             <- external pressure start and stop
+tstep 0.01                    <- time step
+friction 1.0                  <- friction parameter of the langevin thermostat apply to the particles velocities
+frictionL 0.01                <- friction parameter of the langevin thermostat apply to the barostat velocity
+nstep 1000                  <- numbers of steps until equilibrate the system
+nequil 100000                <- numbers of steps the equilibration the system
+nconfig  100000 trajectory.dat <- trajetory file in lammps format save each steps 
+nstat    100000  energies.dat   <- file with thermodynamic information save each steps
+cellfile length.dat           <- file with instantaneus values of length system as function of the external pressure
+deep 10.0                     <- parameter of potential
+seed 123456789                <- seed 

@@ -1,0 +1,16 @@
+temperature 0.462 0.462
+tstep 0.01
+Tp 0.5
+pressure 0.0 0.0
+Tb 5.0
+ensemble npt
+npt_style flex
+forcecutoff 3.0
+listcutoff  3.2
+nequil 10000
+nstep  100000
+nconfig 10000 config.xyz
+nstat     100 energies.dat
+seed 69
+inputfile  input.dat
+outputfile output.dat

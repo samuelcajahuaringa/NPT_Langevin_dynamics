@@ -1,0 +1,26 @@
+A fortran implementation of the NPT langevin dynamics for a single partile in one dimensional potential is provided. 
+The algorithm is described in the following paper:
+Stochastic sampling of the isothermal-isobaric ensemble: phase diagram of crystalline solids 
+created a executable npt.x by compile the script npt.sh
+./npt.sh
+
+run a simulation 
+./npt.x < infile
+
+the parameter of the infile are
+nrun 1000          <- numbers of steps to pre-equilibration system
+nequil 80000       <- numbers of steps to equilibration system
+nstat 1000         <- print each steps    
+dt 0.01            <- time step
+xi 2.0             <- initial position 
+pi 0.0             <- initial momentum
+mi 1.0             <- mass 
+Li 8.0             <- initial length box
+ve 0.0             <- initial velocity box
+kT 1.0             <- temperature
+Tp 1.0             <- characteristic time scale of the particle
+Tb 3.0             <- characteristic time scale of the barostat 
+Pext 1.0           <- external pressure
+seed 23            <- seed
+
+

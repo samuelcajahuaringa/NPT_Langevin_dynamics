@@ -1,0 +1,27 @@
+A fortran implementation of the NPT langevin dynamics with anisotropic volume fluctuations
+for a bidimensional systems that display solid-solid phase transition.
+The algorithm is described in the following paper:
+Stochastic sampling of the isothermal-isobaric ensemble: phase diagram of crystalline solids 
+created a executable md_2d.x by compile the script md_2d.sh
+./md_2d.sh
+
+run a simulation 
+./md_2d.x < infile
+
+the parameter of the infile are
+temperature 0.462 0.462      <- temperature start and stop
+tstep 0.01                   <- time step
+Tp 0.5                       <- relaxation time of langenvin thermostat apply to the particles velocities
+pressure 0.0 0.0             <- external pressure start and stop
+Tb 5.0                       <- relaxation time of langenvin thermostat apply to the barostat velocities
+ensemble npt                 <- select the ensemble options: nve, nvt and npt
+npt_style flex               <- style of the npt ensemble iso and flex (default iso)
+forcecutoff 3.0              <- cutoff distance of pair potential
+listcutoff  3.2              <- cutoff distance of neighbor list 
+nequil  10000                <- numbers of steps until equilibrate the system
+nstep  100000                <- numbers of steps the production
+nconfig 10000 config.xyz     <- trajetory file in xyz format save each 10000 steps 
+nstat    1000 energies.dat   <- file with thermodynamic information save each 1000 steps
+seed 69                      <- seed
+inputfile  input.dat         <- file with input positions of the system
+outputfile output.dat        <- file with output positions of the system
