@@ -7,8 +7,8 @@ This is a fortran codes for performing simulations in the isothermal-isobaric en
 and also the fully flexible cell case for a bidimensional model that display a solid-solid phase transition.
 
 ## Requirements
-
-    Fortran
+   
+   Fortran
 
 ## Usage
 
@@ -18,8 +18,8 @@ The examples are founds in the folders npt_iso and npt_flex with respective READ
 
 If you find some problems with the package, do not hesitate to contact us
 
-    Samuel Cajahuaringa (Instituto de Física Gleb Wataghin, UNICAMP) samuelif@ifi.unicamp.br
+   Samuel Cajahuaringa (Instituto de Física Gleb Wataghin, UNICAMP) samuelif@ifi.unicamp.br
 
-    Alex Antonelli (Instituto de Física Gleb Wataghin, UNICAMP) aantone@ifi.unicamp.br
+   Alex Antonelli (Instituto de Física Gleb Wataghin, UNICAMP) aantone@ifi.unicamp.br
 
 2018
