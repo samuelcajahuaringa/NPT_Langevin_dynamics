@@ -1,5 +1,6 @@
-Stochastic sampling of the isothermal-isobaric ensemble with Langevin dynamics
-
+<HEAD>
+<TITLE> Stochastic sampling of the isothermal-isobaric ensemble with Langevin dynamics
+</HEAD>
 We provide the code that supports the numerical tests reported in the manuscript Stochastic sampling of the isothermal-isobaric
 ensemble: phase diagram of crystalline solids from Langevin dynamics simulation 
 
